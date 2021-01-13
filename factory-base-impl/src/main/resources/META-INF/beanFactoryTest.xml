@@ -8,4 +8,16 @@
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
+    <bean id="getBeanTest" class="com.spring.code.analysis.factory.domain.lookupmethod.GetBeanTest">
+        <lookup-method name="getBean" bean="teacher"/>
+    </bean>
+
+    <bean id="teacher" class="com.spring.code.analysis.factory.domain.lookupmethod.Teacher"/>
+
+    <bean id="testChangeMethod" class="com.spring.code.analysis.factory.domain.replacemethod.TestChangeMethod">
+        <replaced-method name="changeMe" replacer="testMethodReplace"/>
+    </bean>
+
+    <bean id="testMethodReplace" class="com.spring.code.analysis.factory.domain.replacemethod.TestMethodReplace"/>
+
 </beans>
