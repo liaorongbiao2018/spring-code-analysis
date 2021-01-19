@@ -1,11 +1,9 @@
 package com.spring.code.analysis.basic.usage.postprocessor;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 
-import java.beans.PropertyDescriptor;
 
 /**
  * @author liaorb
@@ -26,17 +24,6 @@ public class PersonInterceptor implements BeanPostProcessor, InstantiationAwareB
         return false;
     }
 
-    @Override
-    public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
-        System.out.println("postProcessProperties");
-        return null;
-    }
-
-    @Override
-    public PropertyValues postProcessPropertyValues(PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName) throws BeansException {
-        System.out.println("postProcessPropertyValues");
-        return null;
-    }
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
